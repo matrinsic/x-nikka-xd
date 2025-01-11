@@ -1,5 +1,5 @@
 import { getGoodbye, getWelcome } from '#sql';
-import { XSTRO } from '#utils';
+import { NIKKA } from '#utils';
 import { getBuffer } from 'xstro-utils';
 
 export async function Greetings(update = {}, client) {
@@ -25,9 +25,9 @@ export async function Greetings(update = {}, client) {
 			if (!welcomesettings.message) {
 				message = `@${newMember.split('@')[0]} welcome to ${groupInfo.subject}, Nice to meet you, we have ${groupInfo.size} group members now, @${groupInfo.subjectOwner.split('@')[0]} created this group on ${new Date(groupInfo.creation).toLocaleString('en-US', dateOptions)}, ${groupInfo.desc ? 'Read Group Description:\n\n' + groupInfo.desc : ''}`;
 			} else {
-				const facts = await XSTRO.facts();
-				const quotes = await XSTRO.quotes();
-				const advice = await XSTRO.advice();
+				const facts = await NIKKA.facts();
+				const quotes = await NIKKA.quotes();
+				const advice = await NIKKA.advice();
 
 				message = welcomesettings.message
 					.replace('@owner', `@${groupInfo.subjectOwner.split('@')[0]}`)
@@ -67,9 +67,9 @@ export async function Greetings(update = {}, client) {
 			if (!goodbyesettings.message) {
 				message = `@${leftMember.split('@')[0]} has left ${groupInfo.subject}. We won't miss you, Take care!`;
 			} else {
-				const facts = await XSTRO.facts();
-				const quotes = await XSTRO.quotes();
-				const advice = await XSTRO.advice();
+				const facts = await NIKKA.facts();
+				const quotes = await NIKKA.quotes();
+				const advice = await NIKKA.advice();
 
 				message = goodbyesettings.message
 					.replace('@owner', `@${groupInfo.subjectOwner.split('@')[0]}`)

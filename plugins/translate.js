@@ -1,7 +1,7 @@
-import { bot } from '#lib';
-import { XSTRO } from '#utils';
+import { haki } from '#lib';
+import { NIKKA } from '#utils';
 
-bot(
+haki(
 	{
 		pattern: 'trt',
 		public: true,
@@ -18,7 +18,7 @@ bot(
 
 		const textToTranslate = message.reply_message.text;
 		const targetLangCode = targetLang.split(' - ')[1];
-		const res = await XSTRO.translate(textToTranslate, targetLangCode);
+		const res = await NIKKA.translate(textToTranslate, targetLangCode);
 		return await message.send(res);
 	},
 );

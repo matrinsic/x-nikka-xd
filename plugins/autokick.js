@@ -1,7 +1,7 @@
-import { bot } from '#lib';
+import { haki } from '#lib';
 import { addAKick, delKick, getKicks } from '#sql';
 
-bot(
+haki(
 	{
 		pattern: 'akick',
 		public: false,
@@ -21,7 +21,7 @@ bot(
 	},
 );
 
-bot(
+haki(
 	{
 		pattern: 'akickdel',
 		public: false,
@@ -41,7 +41,7 @@ bot(
 	},
 );
 
-bot(
+haki(
 	{
 		pattern: 'getakick',
 		public: false,

@@ -1,8 +1,8 @@
-import { bot } from '#lib';
+import { haki } from '#lib';
 import { upload } from '#utils';
 import { getBuffer, getJson } from 'xstro-utils';
 
-bot(
+haki(
 	{
 		pattern: 'ai',
 		public: true,
@@ -20,7 +20,7 @@ bot(
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'llama',
 		public: true,
@@ -35,7 +35,7 @@ bot(
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'gpt',
 		public: true,
@@ -53,7 +53,7 @@ bot(
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'askimg',
 		public: true,
@@ -70,7 +70,7 @@ bot(
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'dalle',
 		public: true,
@@ -86,7 +86,7 @@ bot(
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'claude',
 		public: true,
@@ -107,7 +107,7 @@ bot(
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'hakiu',
 		public: true,
@@ -128,7 +128,7 @@ bot(
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'gemini',
 		public: true,
@@ -149,7 +149,7 @@ bot(
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'aisearch',
 		public: true,
@@ -166,7 +166,7 @@ bot(
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'gpt4o',
 		public: true,

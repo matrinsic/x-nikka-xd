@@ -1,9 +1,9 @@
-import { bot } from '#lib';
+import { haki } from '#lib';
 import { delay } from 'baileys';
 import { toJid } from '#utils';
 import { disableGroupEvents, enableGroupEvents, isGroupEventEnabled } from '#sql';
 
-bot(
+haki(
 	{
 		pattern: 'act',
 		public: true,
@@ -20,7 +20,7 @@ bot(
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'deact',
 		public: true,
@@ -37,7 +37,7 @@ bot(
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'ckick',
 		public: false,
@@ -68,7 +68,7 @@ bot(
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'gname',
 		public: true,
@@ -85,7 +85,7 @@ bot(
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'gdesc ?(.*)',
 		public: true,
@@ -101,7 +101,7 @@ bot(
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'promote',
 		public: true,
@@ -126,7 +126,7 @@ bot(
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'demote',
 		public: true,
@@ -151,7 +151,7 @@ bot(
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'kick ?(.*)',
 		public: false,
@@ -170,7 +170,7 @@ bot(
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'invite',
 		public: true,
@@ -186,7 +186,7 @@ bot(
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'leave',
 		public: false,
@@ -201,7 +201,7 @@ bot(
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'poll',
 		public: true,
@@ -226,7 +226,7 @@ bot(
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'mute',
 		public: true,
@@ -244,7 +244,7 @@ bot(
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'unmute',
 		public: true,
@@ -262,7 +262,7 @@ bot(
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'tagadmin',
 		public: false,
@@ -283,7 +283,7 @@ bot(
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'revoke',
 		public: true,
@@ -298,7 +298,7 @@ bot(
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'gpp',
 		public: false,
@@ -315,7 +315,7 @@ bot(
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'lock',
 		public: true,
@@ -332,7 +332,7 @@ bot(
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'unlock',
 		public: true,
@@ -349,7 +349,7 @@ bot(
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'requests',
 		public: true,
@@ -371,7 +371,7 @@ bot(
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'acceptall',
 		public: true,
@@ -395,7 +395,7 @@ bot(
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'rejectall',
 		public: true,
@@ -418,7 +418,7 @@ bot(
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'rgpp',
 		public: false,
@@ -433,7 +433,7 @@ bot(
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'newgc',
 		public: false,

@@ -1,10 +1,10 @@
 import { performance } from 'perf_hooks';
-import { bot } from '#lib';
+import { haki } from '#lib';
 import { manageProcess, runtime } from '#utils';
 import { getBuffer, getJson } from 'xstro-utils';
 import os from 'os';
 
-bot(
+haki(
 	{
 		pattern: 'ping',
 		public: true,
@@ -19,7 +19,7 @@ bot(
 	},
 );
 
-bot(
+haki(
 	{
 		pattern: 'runtime',
 		public: true,
@@ -31,7 +31,7 @@ bot(
 	},
 );
 
-bot(
+haki(
 	{
 		pattern: 'restart',
 		public: false,
@@ -44,7 +44,7 @@ bot(
 	},
 );
 
-bot(
+haki(
 	{
 		pattern: 'shutdown',
 		public: false,
@@ -57,7 +57,7 @@ bot(
 	},
 );
 
-bot(
+haki(
 	{
 		pattern: 'logout',
 		public: false,
@@ -75,7 +75,7 @@ bot(
 	},
 );
 
-bot(
+haki(
 	{
 		pattern: 'fetch',
 		public: true,
@@ -91,7 +91,7 @@ bot(
 	},
 );
 
-bot(
+haki(
 	{
 		pattern: 'cpu',
 		public: false,

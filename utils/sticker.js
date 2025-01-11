@@ -61,7 +61,7 @@ async function writeExifImg(media, metadata = {}) {
 	if (metadata.packname || metadata.author) {
 		const img = new webp.Image();
 		const json = {
-			'sticker-pack-id': `https://github.com/AstroX11/Xstro`,
+			'sticker-pack-id': `https://github.com/hakisolos/x-nikka-xd`,
 			'sticker-pack-name': metadata.packname,
 			'sticker-pack-publisher': metadata.author,
 			emojis: metadata.categories ? metadata.categories : [''],
@@ -87,7 +87,7 @@ async function writeExifVid(media, metadata = {}) {
 	if (metadata.packname || metadata.author) {
 		const img = new webp.Image();
 		const json = {
-			'sticker-pack-id': `https://github.com/AstroX11/Xstro`,
+			'sticker-pack-id': `https://github.com/hakisolos/x-nikka-xd`,
 			'sticker-pack-name': metadata.packname,
 			'sticker-pack-publisher': metadata.author,
 			emojis: metadata.categories ? metadata.categories : [''],
@@ -114,7 +114,7 @@ async function writeExifVid(media, metadata = {}) {
 export const createSticker = async buffer => {
 	const mime = await getMimeType(buffer);
 	let res;
-	const options = { packname: config.STICKER_PACK.split(';')[0] || 'χѕтяσ м∂', author: config.STICKER_PACK.split(';')[1] || 'αѕтяσχ11' };
+	const options = { packname: config.STICKER_PACK.split(';')[0] || 'H4KI', author: config.STICKER_PACK.split(';')[1] || 'XER' };
 	if (mime.startsWith('image/')) {
 		res = await writeExifImg(buffer, options);
 	} else if (mime.startsWith('video/')) {

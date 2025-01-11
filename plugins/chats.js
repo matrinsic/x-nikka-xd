@@ -1,4 +1,4 @@
-import { bot } from '#lib';
+import { haki } from '#lib';
 import {
 	getChatSummary,
 	getGroupMembersMessageCount,
@@ -6,7 +6,7 @@ import {
 	getInactiveGroupMembers
 } from '#sql';
 
-bot(
+haki(
 	{
 		pattern: 'listpc',
 		public: false,
@@ -41,7 +41,7 @@ Last Message: ${new Date(chat.lastMessageTimestamp).toLocaleString()}`
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'listgc',
 		public: false,
@@ -75,7 +75,7 @@ Last Message: ${new Date(chat.lastMessageTimestamp).toLocaleString()}`;
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'active',
 		public: true,
@@ -96,7 +96,7 @@ bot(
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'inactive',
 		public: true,

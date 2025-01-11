@@ -1,8 +1,8 @@
-import { bot } from '#lib';
+import { haki } from '#lib';
 import { getAnti, setAnti, initializeAntiDeleteSettings } from '#sql';
 initializeAntiDeleteSettings();
 
-bot(
+haki(
 	{
 		pattern: 'antidelete',
 		public: false,

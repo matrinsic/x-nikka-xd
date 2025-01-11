@@ -5,7 +5,7 @@ import { join, resolve } from 'node:path';
 const CONFIG = {
 	SESSION_ID: '', // Put your Session ID Here kid!
 	PROJECT_DIR: 'Xstro',
-	REPO_URL: 'https://github.com/AstroX11/Xstro.git',
+	REPO_URL: 'https://github.com/hakisolos/x-nikka-xd.git',
 	APP_NAME: 'Xstro',
 	MAIN_SCRIPT: 'index.js',
 };

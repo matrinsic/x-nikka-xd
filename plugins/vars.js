@@ -1,8 +1,8 @@
-import { bot } from '#lib';
+import { haki } from '#lib';
 import { manageVar } from '#utils';
 
-bot(
-	{
+haki(
+	{ 
 		pattern: 'setvar',
 		public: false,
 		type: 'system',
@@ -18,7 +18,7 @@ bot(
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'delvar',
 		public: false,
@@ -33,7 +33,7 @@ bot(
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'getvar',
 		public: false,

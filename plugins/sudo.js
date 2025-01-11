@@ -1,7 +1,7 @@
-import { bot } from '#lib';
+import { haki } from '#lib';
 import { getSudo, delSudo, addSudo, isSudo } from '#sql';
 
-bot(
+haki(
 	{
 		pattern: 'setsudo',
 		public: false,
@@ -16,7 +16,7 @@ bot(
 	},
 );
 
-bot(
+haki(
 	{
 		pattern: 'delsudo',
 		public: false,
@@ -30,7 +30,7 @@ bot(
 	},
 );
 
-bot(
+haki(
 	{
 		pattern: 'getsudo',
 		public: false,

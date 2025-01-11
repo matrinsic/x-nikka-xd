@@ -1,9 +1,9 @@
-import { bot } from '#lib';
-import { XSTRO } from '#utils';
+import { haki } from '#lib';
+import { NIKKA } from '#utils';
 import { getJson } from 'xstro-utils';
 import { delay } from 'baileys';
 
-bot(
+haki(
 	{
 		pattern: 'facts',
 		public: true,
@@ -11,11 +11,11 @@ bot(
 		type: 'fun'
 	},
 	async message => {
-		return await message.send(`\`\`\`${await XSTRO.facts()}\`\`\``);
+		return await message.send(`\`\`\`${await NIKKA.facts()}\`\`\``);
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'quotes',
 		public: true,
@@ -23,11 +23,11 @@ bot(
 		type: 'fun'
 	},
 	async message => {
-		return await message.send(`\`\`\`${await XSTRO.quotes()}\`\`\``);
+		return await message.send(`\`\`\`${await NIKKA.quotes()}\`\`\``);
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'advice',
 		public: true,
@@ -35,11 +35,11 @@ bot(
 		type: 'fun'
 	},
 	async message => {
-		return await message.send(`\`\`\`${await XSTRO.advice()}\`\`\``);
+		return await message.send(`\`\`\`${await NIKKA.advice()}\`\`\``);
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'rizz',
 		public: true,
@@ -47,11 +47,11 @@ bot(
 		type: 'fun'
 	},
 	async message => {
-		return await message.send(`\`\`\`${await XSTRO.rizz()}\`\`\``);
+		return await message.send(`\`\`\`${await NIKKA.rizz()}\`\`\``);
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'bible',
 		public: true,
@@ -60,11 +60,11 @@ bot(
 	},
 	async (message, match) => {
 		if (!match) return await message.send('Please provide a verse:\n.john3:16');
-		return await message.send(`\`\`\`${await XSTRO.bible(match.trim())}\`\`\``);
+		return await message.send(`\`\`\`${await NIKKA.bible(match.trim())}\`\`\``);
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'fancy',
 		public: true,
@@ -73,11 +73,11 @@ bot(
 	},
 	async (message, match) => {
 		if (!match) return await message.send('Please provide a text');
-		return await message.send(await XSTRO.fancy(match));
+		return await message.send(await NIKKA.fancy(match));
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'insult',
 		public: true,
@@ -93,7 +93,7 @@ bot(
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'rainbow',
 		public: false,
@@ -110,7 +110,7 @@ bot(
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'sad',
 		public: false,
@@ -145,7 +145,7 @@ bot(
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'world',
 		desc: 'send world emojis with your text',
@@ -169,7 +169,7 @@ bot(
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'solar',
 		type: 'fun',
@@ -192,7 +192,7 @@ bot(
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'snake',
 		type: 'fun',
@@ -233,7 +233,7 @@ bot(
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'plane',
 		type: 'fun',
@@ -264,7 +264,7 @@ bot(
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'hand',
 		type: 'fun',
@@ -305,7 +305,7 @@ bot(
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'nikal',
 		type: 'fun',

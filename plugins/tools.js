@@ -1,8 +1,8 @@
-import { bot } from '#lib';
+import { haki } from '#lib';
 import { remini, uploadFile, upload, XSTRO, removeBg, UploadFileUgu } from '#utils';
 import { getBuffer } from 'xstro-utils';
 
-bot(
+haki(
 	{
 		pattern: 'getpp',
 		public: true,
@@ -16,7 +16,7 @@ bot(
 	},
 );
 
-bot(
+haki(
 	{
 		pattern: 'getbio',
 		public: true,
@@ -35,7 +35,7 @@ bot(
 	},
 );
 
-bot(
+haki(
 	{
 		pattern: 'enhance',
 		public: true,
@@ -50,7 +50,7 @@ bot(
 	},
 );
 
-bot(
+haki(
 	{
 		pattern: 'recolor',
 		public: true,
@@ -65,7 +65,7 @@ bot(
 	},
 );
 
-bot(
+haki(
 	{
 		pattern: 'dehaze',
 		public: true,
@@ -80,7 +80,7 @@ bot(
 	},
 );
 
-bot(
+haki(
 	{
 		pattern: 'upload',
 		public: true,
@@ -97,7 +97,7 @@ bot(
 	},
 );
 
-bot(
+haki(
 	{
 		pattern: 'getsticker',
 		public: true,
@@ -106,17 +106,17 @@ bot(
 	},
 	async (message, match) => {
 		if (!match) return message.send('_Provide A Query_');
-		const stickers = await XSTRO.searchSticker(match);
+		const stickers = await NIKKA.searchSticker(match);
 		for (const sticker of stickers) {
 			const buffer = await getBuffer(sticker);
 			const url = await upload(buffer);
-			const stickerUrl = await XSTRO.makeSticker(url.rawUrl);
+			const stickerUrl = await NIKKA.makeSticker(url.rawUrl);
 			await message.send(stickerUrl, { type: 'sticker' });
 		}
 	},
 );
 
-bot(
+haki(
 	{
 		pattern: 'obfuscate',
 		public: true,
@@ -124,12 +124,12 @@ bot(
 		desc: 'Obfuscates A Code',
 	},
 	async (message, match) => {
-		const obfuscatedCode = await XSTRO.obfuscate(match || message.reply_message.text);
+		const obfuscatedCode = await NIKKA.obfuscate(match || message.reply_message.text);
 		await message.send(obfuscatedCode);
 	},
 );
 
-bot(
+haki(
 	{
 		pattern: 'pdf',
 		public: true,
@@ -137,12 +137,12 @@ bot(
 		desc: 'Generate Pdf Documents From text',
 	},
 	async (message, match) => {
-		const pdfDoc = await XSTRO.generatePdf(match || message.reply_message?.text);
+		const pdfDoc = await NIKKA.generatePdf(match || message.reply_message?.text);
 		return await message.send(pdfDoc, { fileName: 'Converted Document' });
 	},
 );
 
-bot(
+haki(
 	{
 		pattern: 'rmbg',
 		public: true,
@@ -156,7 +156,7 @@ bot(
 	},
 );
 
-bot(
+haki(
 	{
 		pattern: 'gitstalk',
 		public: true,
@@ -165,7 +165,7 @@ bot(
 	},
 	async (message, match) => {
 		if (!match) return message.send('_Provide A GitUserName_');
-		const res = await XSTRO.gitstalk(match);
+		const res = await NIKKA.gitstalk(match);
 		const { username, bio, profile_pic, email, company, created_at, followers, following } = res;
 		return await message.send(
 			`\`\`\`${username} Details:
@@ -181,7 +181,7 @@ Following: ${following || 0}\`\`\``,
 	},
 );
 
-bot(
+haki(
 	{
 		pattern: 'git',
 		public: true,
@@ -201,7 +201,7 @@ bot(
 	},
 );
 
-bot(
+haki(
 	{
 		pattern: 'upload2',
 		public: true,

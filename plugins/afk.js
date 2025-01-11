@@ -1,9 +1,9 @@
-import { bot } from '#lib';
+import { haki } from '#lib';
 import { getAfkMessage, setAfkMessage, delAfkMessage, isSudo } from '#sql';
 
 const afkTrack = {};
 
-bot(
+haki(
 	{
 		pattern: 'afk',
 		public: false,
@@ -40,7 +40,7 @@ bot(
 	},
 );
 
-bot(
+haki(
 	{
 		on: 'text',
 		dontAddCommandList: true,

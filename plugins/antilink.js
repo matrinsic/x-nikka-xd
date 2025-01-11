@@ -1,7 +1,7 @@
-import { bot } from '#lib';
+import { haki } from '#lib';
 import { setAntilink, getAntilink, removeAntilink } from '#sql';
 
-bot(
+haki(
 	{
 		pattern: 'antilink',
 		public: false,

@@ -1,8 +1,8 @@
-import { bot } from '#lib';
+import { haki } from '#lib';
 import { config } from '#config';
 import { aliveMessage, setAliveMsg } from '#sql';
 
-bot(
+haki(
 	{
 		pattern: 'alive',
 		public: true,

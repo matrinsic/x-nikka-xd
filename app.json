@@ -1,8 +1,8 @@
 {
-	"name": "xstro",
+	"name": "haki",
 	"description": "Simple WhatsApp By AstroX11",
 	"logo": "https://avatars.githubusercontent.com/u/188756392?v=4",
-	"repository": "https://github.com/ASTRO-X10/xstro-md",
+	"repository": "https://github.com/hakisolos/x-nikka-md",
 	"stack": "container",
 	"success_url": "/",
 	"buildpacks": [
@@ -22,12 +22,12 @@
 		},
 		"BOT_INFO": {
 			"description": "Bot Owner, Bot Name, URL LOGO",
-			"value": "αѕтяσχ11;χѕтяσ м∂;https://avatars.githubusercontent.com/u/188756392?v=4",
+			"value": "haki;nikka;https://avatars.githubusercontent.com/u/188756392?v=4",
 			"required": false
 		},
 		"STICKER_PACK": {
 			"description": "Exif Metadata for Sticker Pack",
-			"value": "мα∂є ву;χѕтяσ мυℓтι ∂єνι¢є вσт",
+			"value": "by;haki",
 			"required": false
 		},
 		"TIME_ZONE": {

@@ -1,8 +1,8 @@
-import { bot } from '#lib';
+import { haki } from '#lib';
 import { pinterest, XSTRO } from '#utils';
 import { getBuffer, getJson } from 'xstro-utils';
 
-bot(
+haki(
 	{
 		pattern: 'lyrics',
 		public: true,
@@ -21,7 +21,7 @@ bot(
 	},
 );
 
-bot(
+haki(
 	{
 		pattern: 'imdb',
 		public: true,
@@ -37,7 +37,7 @@ bot(
 	},
 );
 
-bot(
+haki(
 	{
 		pattern: 'weather ?(.*)',
 		public: true,
@@ -64,7 +64,7 @@ bot(
 	},
 );
 
-bot(
+haki(
 	{
 		pattern: 'define',
 		public: true,
@@ -79,7 +79,7 @@ bot(
 	},
 );
 
-bot(
+haki(
 	{
 		pattern: 'horo',
 		public: true,
@@ -98,7 +98,7 @@ bot(
 	},
 );
 
-bot(
+haki(
 	{
 		pattern: 'google',
 		public: true,
@@ -107,12 +107,12 @@ bot(
 	},
 	async (message, match) => {
 		if (!match) return message.send('_Provide Search Query_');
-		const res = await XSTRO.google(match);
+		const res = await NIKKA.google(match);
 		return message.send(`\`\`\`${res}\`\`\``);
 	},
 );
 
-bot(
+haki(
 	{
 		pattern: 'wallpaper',
 		public: true,
@@ -122,7 +122,7 @@ bot(
 	async (message, match) => {
 		if (!match) return message.send('_Give me something to search for_');
 
-		const res = await XSTRO.wallpaper(match);
+		const res = await NIKKA.wallpaper(match);
 		for (const item of res) {
 			if (item.image) {
 				await message.send(item.image);
@@ -131,7 +131,7 @@ bot(
 	},
 );
 
-bot(
+haki(
 	{
 		pattern: 'wikipedia',
 		public: true,
@@ -140,13 +140,13 @@ bot(
 	},
 	async (message, match) => {
 		if (!match) return message.send('_Search a term like elon musk_');
-		const res = await XSTRO.wikipedia(match);
+		const res = await NIKKA.wikipedia(match);
 		const { title, extract } = res;
 		return await message.send(`\`\`\`${title}:\n\n${extract}\`\`\``);
 	},
 );
 
-bot(
+haki(
 	{
 		pattern: 'pinterest',
 		public: true,
@@ -160,7 +160,7 @@ bot(
 	},
 );
 
-bot(
+haki(
 	{
 		pattern: 'bing',
 		public: true,
@@ -169,13 +169,13 @@ bot(
 	},
 	async (message, match) => {
 		if (!match) return message.send('_Give Me Query_');
-		const results = await XSTRO.bing(match);
+		const results = await NIKKA.bing(match);
 		const data = results.map((item, index) => `${index + 1}. *${item.title}*\n${item.description}\n${item.link}`).join('\n\n');
 		return await message.send(`*Search Results:*\n\n${data}`);
 	},
 );
 
-bot(
+haki(
 	{
 		pattern: 'yahoo',
 		public: true,
@@ -184,7 +184,7 @@ bot(
 	},
 	async (message, match) => {
 		if (!match) return message.send('_Give me something to search for_');
-		const res = await XSTRO.yahoo(match);
+		const res = await NIKKA.yahoo(match);
 		const data = res
 			.map(result => {
 				return `
@@ -198,7 +198,7 @@ bot(
 	},
 );
 
-bot(
+haki(
 	{
 		pattern: 'npm',
 		public: true,
@@ -215,7 +215,7 @@ bot(
 	},
 );
 
-bot(
+haki(
 	{
 		pattern: 'airquality',
 		public: true,
@@ -225,7 +225,7 @@ bot(
 	async (message, match) => {
 		if (!match) return message.send('_Give me country and city, e.g. nigeria;fct/abuja, india;delhi, pakistan;lahore_');
 		const [country, city] = match.split(';');
-		const res = await XSTRO.airquality(country, city);
+		const res = await NIKKA.airquality(country, city);
 		const { current, forecast, dailyForecastTitle, airQualitySubtitle } = res;
 		let forecastMessage = forecast
 			.map(day =>

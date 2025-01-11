@@ -1,4 +1,4 @@
-import { bot } from '#lib';
+import { haki } from '#lib';
 import { isSudo } from '#sql';
 import { createRequire } from 'module';
 import { fileURLToPath } from 'url';
@@ -11,7 +11,7 @@ const require = createRequire(import.meta.url);
 // Store imported modules in memory
 const importCache = new Map();
 
-bot(
+haki(
 	{
 		on: 'text',
 		dontAddCommandList: true
@@ -140,7 +140,7 @@ bot(
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'eval ?(.*)',
 		public: false,

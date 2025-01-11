@@ -1,8 +1,8 @@
-import { bot } from '#lib';
+import { haki } from '#lib';
 import { addWelcome, delWelcome, isWelcomeOn, addGoodbye, delGoodBye, isGoodByeOn } from '#sql';
 import { delay } from 'baileys';
 
-bot(
+haki(
 	{
 		pattern: 'welcome',
 		public: false,
@@ -13,7 +13,7 @@ bot(
 	async (message, match, { prefix, pushName }) => {
 		if (!match) {
 			return message.send(
-				`ᴡᴇʟᴄᴏᴍᴇ ᴍᴇssᴀɢᴇs sᴇᴛᴜᴘ\n\n_${prefix}welcome on_\nᴛᴜʀɴ ᴏɴ ᴡᴇʟᴄᴏᴍᴇ ᴍᴇssᴀɢᴇs\n\n_${prefix}welcome "your message here"_\nsᴇᴛᴜᴘ ᴄᴜsᴛᴏᴍ ᴡᴇʟᴄᴏᴍᴇ ᴍᴇssᴀɢᴇs\n\n_${prefix}welcome off_\nᴅɪsᴀʙʟᴇs ᴡᴇʟᴄᴏᴍᴇ ᴍᴇssᴀɢᴇ ɪɴ ᴛʜɪs ɢʀᴏᴜᴘ\n\n*νιѕιт ωιкι тσ ℓєαяи нσω тσ ¢υѕтσмιzє уσυя ωєℓ¢σмє мєѕѕαgє:*\n\n_https://github.com/AstroX11/Xstro/wiki/Welcome-&&-Goodbye-Messages_`
+				`ᴡᴇʟᴄᴏᴍᴇ ᴍᴇssᴀɢᴇs sᴇᴛᴜᴘ\n\n_${prefix}welcome on_\nᴛᴜʀɴ ᴏɴ ᴡᴇʟᴄᴏᴍᴇ ᴍᴇssᴀɢᴇs\n\n_${prefix}welcome "your message here"_\nsᴇᴛᴜᴘ ᴄᴜsᴛᴏᴍ ᴡᴇʟᴄᴏᴍᴇ ᴍᴇssᴀɢᴇs\n\n_${prefix}welcome off_\nᴅɪsᴀʙʟᴇs ᴡᴇʟᴄᴏᴍᴇ ᴍᴇssᴀɢᴇ ɪɴ ᴛʜɪs ɢʀᴏᴜᴘ\n\n*νιѕιт ωιкι тσ ℓєαяи нσω тσ ¢υѕтσмιzє уσυя ωєℓ¢σмє мєѕѕαgє:*\n\n_https://github.com/hakisolos/x-nikka-xd/wiki/Welcome-&&-Goodbye-Messages_`
 			);
 		}
 		if (match === 'on'.toLowerCase()) {
@@ -36,7 +36,7 @@ bot(
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'goodbye',
 		public: false,
@@ -47,7 +47,7 @@ bot(
 	async (message, match, { prefix, pushName }) => {
 		if (!match) {
 			return message.send(
-				`ɢᴏᴏᴅʙʏᴇ ᴍᴇssᴀɢᴇs sᴇᴛᴜᴘ\n\n_${prefix}goodbye on_\nᴛᴜʀɴ ᴏɴ ɢᴏᴏᴅʙʏᴇ ᴍᴇssᴀɢᴇs\n\n_${prefix}goodbye "your message here"_\nsᴇᴛᴜᴘ ᴄᴜsᴛᴏᴍ ɢᴏᴏᴅʙʏᴇ ᴍᴇssᴀɢᴇs\n\n_${prefix}goodbye off_\nᴅɪsᴀʙʟᴇs ɢᴏᴏᴅʙʏᴇ ᴍᴇssᴀɢᴇ ɪɴ ᴛʜɪs ɢʀᴏᴜᴘ\n\n*νιѕιт ωιкι тσ ℓєαяи нσω тσ ¢υѕтσмιzє уσυя gσσdʙүє мєѕѕαgє:*\n\n_https://github.com/AstroX11/Xstro/wiki/Welcome-&&-Goodbye-Messages_`
+				`ɢᴏᴏᴅʙʏᴇ ᴍᴇssᴀɢᴇs sᴇᴛᴜᴘ\n\n_${prefix}goodbye on_\nᴛᴜʀɴ ᴏɴ ɢᴏᴏᴅʙʏᴇ ᴍᴇssᴀɢᴇs\n\n_${prefix}goodbye "your message here"_\nsᴇᴛᴜᴘ ᴄᴜsᴛᴏᴍ ɢᴏᴏᴅʙʏᴇ ᴍᴇssᴀɢᴇs\n\n_${prefix}goodbye off_\nᴅɪsᴀʙʟᴇs ɢᴏᴏᴅʙʏᴇ ᴍᴇssᴀɢᴇ ɪɴ ᴛʜɪs ɢʀᴏᴜᴘ\n\n*νιѕιт ωιкι тσ ℓєαяи нσω тσ ¢υѕтσмιzє уσυя gσσdʙүє мєѕѕαgє:*\n\n_https://github.com/hakisolos/x-nikka-xd/wiki/Welcome-&&-Goodbye-Messages_`
 			);
 		}
 		if (match === 'on') {

@@ -1,7 +1,7 @@
-import { bot } from '#lib';
+import { haki } from '#lib';
 import { addAntiCall, editSpecificAntiCall, getAntiCall, isJidInAntiCall } from '#sql';
 
-bot(
+haki(
 	{
 		pattern: 'anticall',
 		public: false,

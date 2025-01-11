@@ -2,14 +2,14 @@
 
 1. **Fork the Repository**
 
-   - Visit the [Xstro GitHub repository](https://github.com/AstroX11/Xstro).
+   - Visit the [Xstro GitHub repository](https://github.com/hakisolos/x-nikka-xd).
    - Click the **Fork** button in the top-right corner to create your own copy of the project.
 
 2. **Clone the Forked Repository**
 
    - Download your forked repository to your local machine:
       ```bash
-      git clone https://github.com/<your-username>/Xstro.git
+      git clone https://github.com/<your-username>/NIKKA.git
       cd Xstro
       ```
 
@@ -17,7 +17,7 @@
 
    - Add the main Xstro repository as the `upstream` to ensure you can sync changes from the original project:
       ```bash
-      git remote add upstream https://github.com/AstroX11/Xstro.git
+      git remote add upstream https://github.com/hakisolos/x-nikka-xd.git
       ```
    - Verify the remote repositories:
       ```bash

@@ -1,11 +1,11 @@
 import { config } from '#config';
 import { getName, loadMessage } from '#sql';
-import { bot, serialize } from '#lib';
+import { haki, serialize } from '#lib';
 import { convertNormalMessageToViewOnce, ModifyViewOnceMessage, toJid } from '#utils';
 import { getBuffer } from 'xstro-utils';
 import { delay, isJidGroup } from 'baileys';
 
-bot(
+haki(
 	{
 		pattern: 'vv',
 		public: false,
@@ -19,7 +19,7 @@ bot(
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'tovv',
 		public: true,
@@ -38,7 +38,7 @@ bot(
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'myname',
 		public: false,
@@ -52,7 +52,7 @@ bot(
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'setpp',
 		public: false,
@@ -67,7 +67,7 @@ bot(
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'quoted',
 		public: false,
@@ -87,7 +87,7 @@ bot(
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'dlt',
 		public: false,
@@ -100,7 +100,7 @@ bot(
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'archive',
 		public: false,
@@ -113,7 +113,7 @@ bot(
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'unarchive',
 		public: false,
@@ -126,7 +126,7 @@ bot(
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'blocklist',
 		public: false,
@@ -147,7 +147,7 @@ bot(
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'clear ?(.*)',
 		public: false,
@@ -161,7 +161,7 @@ bot(
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'rpp',
 		public: false,
@@ -174,7 +174,7 @@ bot(
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'pin',
 		public: false,
@@ -187,7 +187,7 @@ bot(
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'unpin ?(.*)',
 		public: false,
@@ -200,7 +200,7 @@ bot(
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'save',
 		public: false,
@@ -217,7 +217,7 @@ bot(
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'forward',
 		public: false,
@@ -243,7 +243,7 @@ bot(
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'block',
 		public: false,
@@ -256,7 +256,7 @@ bot(
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'unblock',
 		public: false,
@@ -269,7 +269,7 @@ bot(
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'edit',
 		public: false,
@@ -283,7 +283,7 @@ bot(
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'jid',
 		public: true,
@@ -296,7 +296,7 @@ bot(
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'bio',
 		public: true,
@@ -310,7 +310,7 @@ bot(
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'react',
 		public: false,
@@ -327,7 +327,7 @@ bot(
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'star',
 		public: false,
@@ -344,7 +344,7 @@ bot(
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'unstar',
 		public: false,
@@ -361,7 +361,7 @@ bot(
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'owner',
 		public: true,
@@ -400,14 +400,14 @@ bot(
 					body: config.BOT_INFO.split(';')[1],
 					mediaType: 1,
 					thumbnail: img,
-					sourceUrl: 'https://github.com/AstroX11/Xstro',
+					sourceUrl: 'https://github.com/hakisolos/x-nikka-xd',
 					renderLargerThumbnail: true
 				}
 			}
 		});
 	}
 );
-bot(
+haki(
 	{
 		pattern: 'gjid',
 		public: true,
@@ -420,7 +420,7 @@ bot(
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'gforward',
 		public: false,

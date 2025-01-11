@@ -1,10 +1,10 @@
-import { bot } from '#lib';
+import { haki } from '#lib';
 import { addWarn, getWarn, resetWarn } from '#sql';
 import { config } from '#config';
 
 const { WARN_COUNT } = config;
 
-bot(
+haki(
 	{
 		pattern: 'warn',
 		public: false,
@@ -42,7 +42,7 @@ bot(
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'getwarn',
 		public: false,
@@ -56,7 +56,7 @@ bot(
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'resetwarn',
 		public: false,

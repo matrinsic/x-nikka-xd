@@ -1,7 +1,7 @@
-import { bot } from '#lib';
+import { haki } from '#lib';
 import { delAntibot, getAntibot, isSudo, setAntibot } from '#sql';
 
-bot(
+haki(
 	{
 		pattern: 'antibot',
 		public: true,
@@ -23,7 +23,7 @@ bot(
 	}
 );
 
-bot(
+haki(
 	{
 		on: 'group-chat',
 		dontAddCommandList: true

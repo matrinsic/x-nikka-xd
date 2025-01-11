@@ -1,7 +1,7 @@
-import { bot, commands } from '#lib';
+import { haki, commands } from '#lib';
 import { delcmd, getcmd, setcmd } from '#sql';
 
-bot(
+haki(
 	{
 		pattern: 'setcmd',
 		public: false,
@@ -36,7 +36,7 @@ bot(
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'delcmd',
 		public: false,
@@ -55,7 +55,7 @@ bot(
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'getcmd',
 		public: false,

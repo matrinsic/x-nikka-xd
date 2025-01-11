@@ -1,7 +1,7 @@
-import { bot } from '#lib';
-import { XSTRO } from '#utils';
+import { haki } from '#lib';
+import { NIKKA } from '#utils';
 
-bot(
+haki(
 	{
 		pattern: 'news',
 		public: true,
@@ -9,7 +9,7 @@ bot(
 		type: 'news'
 	},
 	async message => {
-		const res = await XSTRO.news();
+		const res = await NIKKA.news();
 		let data = '';
 		for (const items of res) {
 			data += `\`\`\`Title: ${items.title}\n\nDescription: ${items.description}\n\nlink: ${items.url}\`\`\`\n\n`;
@@ -18,7 +18,7 @@ bot(
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'footballnews',
 		public: true,
@@ -26,7 +26,7 @@ bot(
 		type: 'news'
 	},
 	async message => {
-		const res = await XSTRO.footballnews();
+		const res = await NIKKA.footballnews();
 		let data = '';
 		for (const items of res) {
 			data += `\`\`\`Title: ${items.title}\nlink: ${items.url}\`\`\`\n\n`;
@@ -35,7 +35,7 @@ bot(
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'animenews',
 		public: true,
@@ -43,7 +43,7 @@ bot(
 		type: 'news'
 	},
 	async message => {
-		const res = await XSTRO.animenews();
+		const res = await NIKKA.animenews();
 		let data = '';
 		for (const items of res) {
 			data += `\`\`\`Title: ${items.title}\nDescription: ${items.description}\nlink: ${items.link}\`\`\`\n\n`;
@@ -52,7 +52,7 @@ bot(
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'technews',
 		public: true,
@@ -60,7 +60,7 @@ bot(
 		type: 'news'
 	},
 	async (message, match) => {
-		const news = await XSTRO.technews();
+		const news = await NIKKA.technews();
 		if (!news?.length) return message.send('No news found');
 		const formattedNews = news
 			.map(
@@ -72,7 +72,7 @@ bot(
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'wabeta',
 		public: true,
@@ -80,7 +80,7 @@ bot(
 		type: 'news'
 	},
 	async message => {
-		const res = await XSTRO.wabeta();
+		const res = await NIKKA.wabeta();
 		if (!res || res.length === 0) {
 			return message.send('No updates available at the moment.');
 		}

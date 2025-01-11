@@ -1,7 +1,7 @@
-import { bot } from '#lib';
+import { haki } from '#lib';
 import { setViewOnce, setViewOnceType, getSettings } from '#sql';
 
-bot(
+haki(
 	{
 		pattern: 'antivv',
 		public: false,

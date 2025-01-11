@@ -1,7 +1,7 @@
-import { bot } from '#lib';
+import { haki } from '#lib';
 import { addNote, removeNote, updateNote, getNotes } from '#sql';
 
-bot(
+haki(
 	{
 		pattern: 'addnote',
 		public: true,
@@ -21,7 +21,7 @@ bot(
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'delnote',
 		public: true,
@@ -37,7 +37,7 @@ bot(
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'editnote',
 		public: true,
@@ -60,7 +60,7 @@ bot(
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'getnotes',
 		public: true,
@@ -76,7 +76,7 @@ bot(
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'cnote',
 		public: true,

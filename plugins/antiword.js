@@ -1,7 +1,7 @@
-import { bot } from '#lib';
+import { haki } from '#lib';
 import { setAntiWordStatus, getAntiWords, addAntiWords, removeAntiWords } from '#sql';
 
-bot(
+haki(
 	{
 		pattern: 'antiword',
 		public: true,

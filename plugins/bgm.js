@@ -1,7 +1,7 @@
-import { bot } from '#lib';
+import { haki } from '#lib';
 import { addBgm, getBgmResponse, deleteBgm, getBgmList, loadMessage, saveMessage } from '#sql';
 
-bot(
+haki(
 	{
 		pattern: 'bgm',
 		desc: 'Show BGM command menu',
@@ -24,7 +24,7 @@ Note: Bot plays matching BGMs automatically in chat
 	},
 );
 
-bot(
+haki(
 	{
 		pattern: 'addbgm',
 		public: false,
@@ -44,7 +44,7 @@ bot(
 	},
 );
 
-bot(
+haki(
 	{
 		pattern: 'getbgm',
 		desc: 'Get a BGM by word',
@@ -61,7 +61,7 @@ bot(
 	},
 );
 
-bot(
+haki(
 	{
 		pattern: 'delbgm',
 		public: false,
@@ -78,7 +78,7 @@ bot(
 	},
 );
 
-bot(
+haki(
 	{
 		pattern: 'listbgm',
 		public: false,
@@ -93,7 +93,7 @@ bot(
 	},
 );
 
-bot(
+haki(
 	{
 		on: 'text',
 		dontAddCommandList: true,

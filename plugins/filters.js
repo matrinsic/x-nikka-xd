@@ -1,7 +1,7 @@
-import { bot } from '#lib';
+import { haki } from '#lib';
 import { addFilter, removeFilter, getFilters } from '#sql';
 
-bot(
+haki(
 	{
 		pattern: 'filters',
 		public: false,
@@ -24,7 +24,7 @@ ${message.prefix}delfilter dm hi (To delete a filter set for direct messages)
 	},
 );
 
-bot(
+haki(
 	{
 		pattern: 'pfilter',
 		public: false,
@@ -42,7 +42,7 @@ bot(
 	},
 );
 
-bot(
+haki(
 	{
 		pattern: 'gfilter',
 		public: false,
@@ -60,7 +60,7 @@ bot(
 	},
 );
 
-bot(
+haki(
 	{
 		pattern: 'delfilter',
 		public: false,
@@ -81,7 +81,7 @@ bot(
 	},
 );
 
-bot(
+haki(
 	{
 		pattern: 'getfilters',
 		public: false,
@@ -102,7 +102,7 @@ bot(
 	},
 );
 
-bot(
+haki(
 	{
 		on: 'chats_updates',
 		dontAddCommandList: true,

@@ -1,7 +1,7 @@
-import { bot } from '#lib';
-import { XSTRO } from '#utils';
+import { haki } from '#lib';
+import { NIKKA } from '#utils';
 
-bot(
+haki(
 	{
 		pattern: 'forex',
 		public: true,
@@ -10,7 +10,7 @@ bot(
 	},
 	async (message, match) => {
 		if (!match) return message.send('_Give me a symbol, EURUSD_');
-		const res = await XSTRO.forex(match);
+		const res = await NIKKA.forex(match);
 		if (!res) return message.send('_Invaild Forex Pair_');
 		return message.send(
 			`\`\`\`${match}\n\nLastPrice: ${res.lastPrice}\nCurrency: ${res.currency}\nChangeValue: ${res.changeValue}\nLastUpdate: ${res.lastUpdate}\`\`\``
@@ -18,7 +18,7 @@ bot(
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'fxmajor',
 		public: true,
@@ -26,7 +26,7 @@ bot(
 		type: 'forex'
 	},
 	async message => {
-		const res = await XSTRO.forex('fxmajor');
+		const res = await NIKKA.forex('fxmajor');
 		const data = res
 			.map(item => {
 				return `\`\`\`
@@ -46,7 +46,7 @@ Rating: ${item.Rating}
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'fxminor',
 		public: true,
@@ -54,7 +54,7 @@ bot(
 		type: 'forex'
 	},
 	async message => {
-		const res = await XSTRO.forex('fxminor');
+		const res = await NIKKA.forex('fxminor');
 		const data = res
 			.map(item => {
 				return `\`\`\`
@@ -74,7 +74,7 @@ Rating: ${item.Rating}
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'fxexotic',
 		public: true,
@@ -82,7 +82,7 @@ bot(
 		type: 'forex'
 	},
 	async message => {
-		const res = await XSTRO.forex('fxexotic');
+		const res = await NIKKA.forex('fxexotic');
 		const data = res
 			.map(item => {
 				return `\`\`\`
@@ -102,7 +102,7 @@ Rating: ${item.Rating}
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'fxamericas',
 		public: true,
@@ -110,7 +110,7 @@ bot(
 		type: 'forex'
 	},
 	async message => {
-		const res = await XSTRO.forex('fxamericas');
+		const res = await NIKKA.forex('fxamericas');
 		const data = res
 			.map(item => {
 				return `\`\`\`
@@ -130,7 +130,7 @@ Rating: ${item.Rating}
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'fxeurope',
 		public: true,
@@ -138,7 +138,7 @@ bot(
 		type: 'forex'
 	},
 	async message => {
-		const res = await XSTRO.forex('fxeurope');
+		const res = await NIKKA.forex('fxeurope');
 		const data = res
 			.map(item => {
 				return `\`\`\`
@@ -158,7 +158,7 @@ Rating: ${item.Rating}
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'fxasia',
 		public: true,
@@ -166,7 +166,7 @@ bot(
 		type: 'forex'
 	},
 	async message => {
-		const res = await XSTRO.forex('fxmajor');
+		const res = await NIKKA.forex('fxmajor');
 		const data = res
 			.map(item => {
 				return `\`\`\`
@@ -186,7 +186,7 @@ Rating: ${item.Rating}
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'fxpacific',
 		public: true,
@@ -194,7 +194,7 @@ bot(
 		type: 'forex'
 	},
 	async message => {
-		const res = await XSTRO.forex('fxmajor');
+		const res = await NIKKA.forex('fxmajor');
 		const data = res
 			.map(item => {
 				return `\`\`\`
@@ -214,7 +214,7 @@ Rating: ${item.Rating}
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'fxeast',
 		public: true,
@@ -222,7 +222,7 @@ bot(
 		type: 'forex'
 	},
 	async message => {
-		const res = await XSTRO.forex('fxmiddle-east');
+		const res = await NIKKA.forex('fxmiddle-east');
 		const data = res
 			.map(item => {
 				return `\`\`\`
@@ -242,7 +242,7 @@ Rating: ${item.Rating}
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'fxafrica',
 		public: true,
@@ -250,7 +250,7 @@ bot(
 		type: 'forex'
 	},
 	async message => {
-		const res = await XSTRO.forex('fxafrica');
+		const res = await NIKKA.forex('fxafrica');
 		const data = res
 			.map(item => {
 				return `\`\`\`

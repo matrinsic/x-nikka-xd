@@ -1,7 +1,7 @@
-import { bot } from '#lib';
-import { XSTRO } from '#utils';
+import { haki } from '#lib';
+import { NIKKA } from '#utils';
 
-bot(
+haki(
 	{
 		pattern: 'andrew',
 		public: true,
@@ -10,12 +10,12 @@ bot(
 	},
 	async (message, match) => {
 		if (!match) return message.send('_Give me words_');
-		const res = await XSTRO.meme(match, 'andrew');
+		const res = await NIKKA.meme(match, 'andrew');
 		return await message.send(res);
 	},
 );
 
-bot(
+haki(
 	{
 		pattern: 'elonmusk',
 		public: true,
@@ -24,12 +24,12 @@ bot(
 	},
 	async (message, match) => {
 		if (!match) return message.send('_Give me words_');
-		const res = await XSTRO.meme(match, 'elonmusk');
+		const res = await NIKKA.meme(match, 'elonmusk');
 		return await message.send(res);
 	},
 );
 
-bot(
+haki(
 	{
 		pattern: 'messi',
 		public: true,
@@ -38,12 +38,12 @@ bot(
 	},
 	async (message, match) => {
 		if (!match) return message.send('_Give me words_');
-		const res = await XSTRO.meme(match, 'messi');
+		const res = await NIKKA.meme(match, 'messi');
 		return await message.send(res);
 	},
 );
 
-bot(
+haki(
 	{
 		pattern: 'obama',
 		public: true,
@@ -52,12 +52,12 @@ bot(
 	},
 	async (message, match) => {
 		if (!match) return message.send('_Give me words_');
-		const res = await XSTRO.meme(match, 'obama');
+		const res = await NIKKA.meme(match, 'obama');
 		return await message.send(res);
 	},
 );
 
-bot(
+haki(
 	{
 		pattern: 'ronaldo',
 		public: true,
@@ -66,12 +66,12 @@ bot(
 	},
 	async (message, match) => {
 		if (!match) return message.send('_Give me words_');
-		const res = await XSTRO.meme(match, 'ronaldo');
+		const res = await NIKKA.meme(match, 'ronaldo');
 		return await message.send(res);
 	},
 );
 
-bot(
+haki(
 	{
 		pattern: 'trump',
 		public: true,
@@ -80,7 +80,7 @@ bot(
 	},
 	async (message, match) => {
 		if (!match) return message.send('_Give me words_');
-		const res = await XSTRO.meme(match, 'trump');
+		const res = await NIKKA.meme(match, 'trump');
 		return await message.send(res);
 	},
 );

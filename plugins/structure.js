@@ -1,4 +1,4 @@
-import { bot } from '#lib';
+import { haki } from '#lib';
 import fs from 'fs';
 import path from 'path';
 
@@ -32,7 +32,7 @@ function getDirectoryStructure(dir, prefix = '', isLast = true) {
 	return structure;
 }
 
-bot(
+haki(
 	{
 		pattern: 'structure',
 		public: true,

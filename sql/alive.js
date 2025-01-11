@@ -31,7 +31,7 @@ const AliveDB = DATABASE.define(
  */
 const getAliveMsg = async () => {
 	const msg = await AliveDB.findOne();
-	return msg?.message || `@user χѕтяσ мυℓтι ∂єνι¢є ιѕ αℓινє αи∂ α ѕιмρℓє ωнαтѕαρρ вσт мα∂є ωιтн иσ∂є נѕ\n\n*яυитιмє: &runtime*\n\n*νιѕт ωιкι ραgє тσ ¢υѕтσмιzє αℓινє мєѕѕαgє*\n\nhttps://github.com/AstroX11/Xstro/wiki/Alive-Message`;
+	return msg?.message || `@user ɴɪᴋᴋᴀ ᴍᴅ ɪꜱ ᴜᴘ ᴀɴᴅ ʀᴜɴɴɪɴɢ\n\n*яυитιмє: &runtime*\n\n> thank you for choosing nikka tech inc`;
 };
 
 /**

@@ -1,8 +1,8 @@
-import { bot } from '#lib';
+import { haki } from '#lib';
 import { getRandom } from '#utils';
 import { AutoReact } from '#sql';
 
-bot(
+haki(
 	{
 		pattern: 'areact',
 		public: false,
@@ -22,7 +22,7 @@ bot(
 	},
 );
 
-bot(
+haki(
 	{
 		on: 'text',
 		dontAddCommandList: true,

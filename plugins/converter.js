@@ -1,4 +1,4 @@
-import { bot } from '#lib';
+import { haki } from '#lib';
 import {
 	audioToBlackVideo,
 	convertToMp3,
@@ -12,7 +12,7 @@ import {
 	XSTRO
 } from '#utils';
 
-bot(
+haki(
 	{
 		pattern: 'sticker',
 		public: true,
@@ -30,7 +30,7 @@ bot(
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'take',
 		public: true,
@@ -49,7 +49,7 @@ bot(
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'flip',
 		public: true,
@@ -69,7 +69,7 @@ bot(
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'black',
 		public: true,
@@ -85,7 +85,7 @@ bot(
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'ttp',
 		public: true,
@@ -94,14 +94,14 @@ bot(
 	},
 	async (message, match, { prefix }) => {
 		if (!match) return message.send(`_Usage: ${prefix}ttp Astro_`);
-		const buff = await XSTRO.ttp(match);
+		const buff = await NIKKA.ttp(match);
 		const { rawUrl } = await upload(buff);
-		const sticker = await XSTRO.makeSticker(rawUrl);
+		const sticker = await NIKKA.makeSticker(rawUrl);
 		return await message.send(sticker, { type: 'sticker' });
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'photo',
 		public: true,
@@ -117,7 +117,7 @@ bot(
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'mp3',
 		public: true,
@@ -137,7 +137,7 @@ bot(
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'ptt',
 		public: true,
@@ -158,7 +158,7 @@ bot(
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'mp4',
 		public: true,
@@ -178,7 +178,7 @@ bot(
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'crop',
 		public: true,

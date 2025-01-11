@@ -1,8 +1,8 @@
-import { bot } from '#lib';
+import { haki } from '#lib';
 import { toJid } from '#utils';
 import { readFileSync } from 'fs';
 
-bot(
+haki(
 	{
 		pattern: 'report',
 		public: true,
@@ -28,7 +28,7 @@ MESSAGE: \n${match}
 	},
 );
 
-bot(
+haki(
 	{
 		pattern: 'repo',
 		public: true,
@@ -38,7 +38,7 @@ bot(
 	async message => {
 		const adMessage = `\`\`\`
 Xstro Multi Device WhatsApp Bot
-https://github.com/AstroX11/Xstro
+https://github.com/hakisolos/x-nikka-xd
 
 Maintainers
 - Astro (Main Dev)

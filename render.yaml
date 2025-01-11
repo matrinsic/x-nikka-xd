@@ -3,7 +3,7 @@ services:
      - type: web
        name: Xstro
        runtime: docker
-       repo: https://github.com/AstroX11/Xstro
+       repo: https://github.com/hakisolos/x-nikka-xd
        plan: free
        envVars:
             - key: DEBUG

@@ -1,4 +1,4 @@
-import { bot } from '#lib';
+import { haki } from '#lib';
 import { schedule } from '#sql';
 
 const convertTo24Hour = timeStr => {
@@ -24,7 +24,7 @@ const convertTo12Hour = timeStr => {
 	return `${hour}:${minutes}${period}`;
 };
 
-bot(
+haki(
 	{
 		pattern: 'automute',
 		public: true,
@@ -57,7 +57,7 @@ bot(
 	},
 );
 
-bot(
+haki(
 	{
 		pattern: 'autounmute',
 		public: true,
@@ -89,7 +89,7 @@ bot(
 	},
 );
 
-bot(
+haki(
 	{
 		pattern: 'getmute',
 		public: true,
@@ -108,7 +108,7 @@ bot(
 	},
 );
 
-bot(
+haki(
 	{
 		pattern: 'delmute',
 		public: true,

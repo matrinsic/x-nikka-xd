@@ -1,10 +1,10 @@
-import { bot } from '#lib';
+import { haki } from '#lib';
 import { exec } from 'child_process';
 import simpleGit from 'simple-git';
 
 const git = simpleGit();
 
-bot(
+haki(
 	{
 		pattern: 'update',
 		public: false,

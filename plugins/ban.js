@@ -1,7 +1,7 @@
-import { bot } from '#lib';
+import { haki } from '#lib';
 import { addBan, getBanned, removeBan, isSudo } from '#sql';
 
-bot(
+haki(
 	{
 		pattern: 'ban ?(.*)',
 		public: false,
@@ -16,7 +16,7 @@ bot(
 	},
 );
 
-bot(
+haki(
 	{
 		pattern: 'unban ?(.*)',
 		public: false,
@@ -30,7 +30,7 @@ bot(
 	},
 );
 
-bot(
+haki(
 	{
 		pattern: 'getban',
 		public: false,

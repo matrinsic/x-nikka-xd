@@ -1,7 +1,7 @@
-import { bot } from '#lib';
+import { haki } from '#lib';
 import { delay } from 'baileys';
 
-bot(
+haki(
 	{
 		pattern: 'advertise',
 		public: false,

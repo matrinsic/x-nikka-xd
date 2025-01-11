@@ -1,4 +1,4 @@
-import { bot } from '#lib';
+import { haki } from '#lib';
 import {
 	convertToMp3,
 	extractUrl,
@@ -17,7 +17,7 @@ import { getBuffer, getJson } from 'xstro-utils';
 const API = `https://api.nexoracle.com`;
 const KEY = `free_key@maher_apis`;
 
-bot(
+haki(
 	{
 		pattern: 'apk',
 		public: true,
@@ -32,7 +32,7 @@ bot(
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'facebook',
 		public: true,
@@ -50,7 +50,7 @@ bot(
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'instagram',
 		public: true,
@@ -69,7 +69,7 @@ bot(
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'story',
 		public: true,
@@ -89,7 +89,7 @@ bot(
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'twitter',
 		public: true,
@@ -108,7 +108,7 @@ bot(
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'reddit',
 		public: true,
@@ -126,7 +126,7 @@ bot(
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'tiktok',
 		public: true,
@@ -139,12 +139,12 @@ bot(
 		if (!url) return message.send('_No Tiktok link found!_');
 		url = extractUrl(url);
 		if (!isTikTok(url)) return message.send('_Provide Reddit link!_');
-		const media = await XSTRO.tiktok(url);
+		const media = await NIKKA.tiktok(url);
 		return await message.sendFromUrl(media.url, { caption: media.title });
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'play',
 		public: true,
@@ -158,7 +158,7 @@ bot(
 			.url;
 		const data = (await getJson(`${API}/downloader/yt-audio?apikey=${KEY}&url=${url}`)).result;
 		const { title, desc, thumb } = data;
-		const video = await XSTRO.youtube(url, { mp3: true });
+		const video = await NIKKA.youtube(url, { mp3: true });
 		const mp3 = await getFileAndSave(video.url);
 		const song = await convertToMp3(mp3);
 		return await message.send(song, {
@@ -177,7 +177,7 @@ bot(
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'video',
 		public: true,
@@ -191,7 +191,7 @@ bot(
 			.url;
 		const data = (await getJson(`${API}/downloader/yt-audio?apikey=${KEY}&url=${url}`)).result;
 		const { title, desc, thumb } = data;
-		const res = await XSTRO.youtube(url, { mp4: true });
+		const res = await NIKKA.youtube(url, { mp4: true });
 		const video = await getBuffer(res.url);
 		return await message.send(video, {
 			mimetype: 'video/mp4',
@@ -210,7 +210,7 @@ bot(
 
 const rumble = new Map();
 
-bot(
+haki(
 	{
 		pattern: 'rumble',
 		public: true,
@@ -242,7 +242,7 @@ bot(
 	}
 );
 
-bot(
+haki(
 	{
 		on: 'reply',
 		dontAddCommandList: true

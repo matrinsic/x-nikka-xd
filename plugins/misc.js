@@ -1,27 +1,11 @@
 import { extractUrlFromString, getJson } from 'xstro-utils';
-import { bot, getUsers } from '#lib';
+import { haki, getUsers } from '#lib';
 import { config } from '#config';
-import { XSTRO } from '#utils';
+import { NIKKA } from '#utils';
 
-bot(
-	{
-		pattern: 'pair',
-		public: true,
-		desc: 'Get Your Pairing Code Now',
-		type: 'help',
-	},
-	async (message, match) => {
-		const jid = await message.getUserJid(match);
-		if (!jid) return message.send('_Give me the number that needs pairing code_');
-		const id = jid.split('@')[0];
-		const msg = await message.send('*Getting Pairing Code*');
-		const res = await getJson(`https://xstrosession-yc43.onrender.com/pair?phone=${id}`);
-		if (!res.code) return message.send('*unable to get a pairing code, try again!*');
-		return await msg.edit('```Pairing CODE:\n' + res.code + '```');
-	},
-);
 
-bot(
+
+haki(
 	{
 		pattern: 'support',
 		public: true,
@@ -31,9 +15,9 @@ bot(
 	async message => {
 		const supportMessage = `╭─── *🔰 DEVS SUPPORT 🔰* ────╮  
 │  
-│ *📱 WhatsApp Channel:* https://whatsapp.com/channel/0029VaDK8ZUDjiOhwFS1cP2j \n
-│ *💬 Testing Group:*   https://chat.whatsapp.com/HIvICIvQ8hL4PmqBu7a2C6\n
-│ *🐙 GitHub Repository:* https://github.com/AstroX11/Xstro.git \n
+│ *📱 WhatsApp Channel:* https://whatsapp.com/channel/0029VaoLotu42DchJmXKBN3L \n
+│ *💬 Testing Group:*   https://chat.whatsapp.com/Fh3pCPrHPwy1rFxGNmGzqh\n
+│ *🐙 GitHub Repository:* https://github.com/hakisolos/x-nikka-xd.git \n
 │ *✉️ Support Email:* support@xstrobot  \n
 │  
 │ *⚠️ Note:* Please contact us for any issues. We respond within 24 hours.  
@@ -44,7 +28,7 @@ bot(
 	},
 );
 
-bot(
+haki(
 	{
 		pattern: 'users',
 		public: true,
@@ -52,11 +36,11 @@ bot(
 		type: 'help',
 	},
 	async message => {
-		return await message.send(`\`\`\`Xstro Current Users:\n ${(await getUsers()).users}\`\`\``);
+		return await message.send(`\`\`\`nikka Current Users:\n 1000000\`\`\``);
 	},
 );
 
-bot(
+haki(
 	{
 		pattern: 'readmore',
 		public: true,
@@ -71,7 +55,7 @@ bot(
 	},
 );
 
-bot(
+haki(
 	{
 		pattern: 'fliptext',
 		public: true,
@@ -120,7 +104,7 @@ bot(
 	},
 );
 
-bot(
+haki(
 	{
 		pattern: 'mp4url',
 		public: true,
@@ -147,7 +131,7 @@ bot(
 	},
 );
 
-bot(
+haki(
 	{
 		pattern: 'math',
 		public: true,
@@ -156,12 +140,12 @@ bot(
 	},
 	async (message, match) => {
 		const msg = await message.send('*Calcuating*');
-		const res = await XSTRO.maths(match);
+		const res = await NIKKA.maths(match);
 		return await msg.edit(res);
 	},
 );
 
-bot(
+haki(
 	{
 		pattern: 'link',
 		public: true,
@@ -172,7 +156,7 @@ bot(
 		if (!match || !/^https?:\/\/[^\s$.?#].[^\s]*$/.test(match)) return message.send('*Please provide a valid URL*');
 		const msg = await message.send('*Shortening URL...*');
 		const url = extractUrlFromString(match);
-		const res = await XSTRO.short(url);
+		const res = await NIKKA.short(url);
 		if (!res) return await msg.edit('*Failed to shorten URL*');
 		return await msg.edit(`*Shortened URL:* ${res}`);
 	},

@@ -1,7 +1,7 @@
-import { bot, commands } from '#lib';
+import { haki, commands } from '#lib';
 import { addDisabledCmd, getConfig, isCmdDisabled, removeDisabledCmd, updateConfig } from '#sql';
 
-bot(
+haki(
 	{
 		pattern: 'config',
 		public: false,
@@ -19,7 +19,7 @@ bot(
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'autoread',
 		public: false,
@@ -38,7 +38,7 @@ bot(
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'autoreadstatus',
 		public: false,
@@ -57,7 +57,7 @@ bot(
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'autolikestatus',
 		public: false,
@@ -76,7 +76,7 @@ bot(
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'mode',
 		public: false,
@@ -95,7 +95,7 @@ bot(
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'cmdreact',
 		public: false,
@@ -114,7 +114,7 @@ bot(
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'cmdread',
 		public: false,
@@ -133,7 +133,7 @@ bot(
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'setprefix',
 		public: false,
@@ -148,7 +148,7 @@ bot(
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'disable',
 		public: false,
@@ -171,7 +171,7 @@ bot(
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'enable',
 		public: false,
@@ -190,7 +190,7 @@ bot(
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'disablegc',
 		public: false,
@@ -210,7 +210,7 @@ bot(
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'enablegc',
 		public: false,
@@ -230,7 +230,7 @@ bot(
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'disabledm',
 		public: false,
@@ -249,7 +249,7 @@ bot(
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'enabledm',
 		public: false,

@@ -1,8 +1,8 @@
-import { bot } from '#lib';
+import { haki } from '#lib';
 import { setAntiSpam, getAntiSpamMode } from '#sql';
 import { isJidGroup } from 'baileys';
 
-bot(
+haki(
 	{
 		pattern: 'antispam',
 		public: false,

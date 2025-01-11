@@ -1,7 +1,7 @@
-import { bot } from '#lib';
+import { haki } from '#lib';
 import { ensureContextInfoWithMentionedJid } from '#utils';
 
-bot(
+haki(
 	{
 		pattern: 'tagall',
 		public: true,
@@ -23,7 +23,7 @@ bot(
 	}
 );
 
-bot(
+haki(
 	{
 		pattern: 'tag',
 		public: true,

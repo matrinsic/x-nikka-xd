@@ -1,8 +1,8 @@
-import { bot } from '#lib';
+import { haki } from '#lib';
 import fs from 'fs';
 import path from 'path';
 
-bot(
+haki(
 	{
 		pattern: 'file ?(.*)',
 		fromMe: true,

@@ -1,7 +1,7 @@
-import { bot } from '#lib';
+import { haki } from '#lib';
 import { setMention, delMention, isMention, getMention } from '#sql';
 
-bot(
+haki(
 	{
 		pattern: 'mention',
 		public: false,
@@ -25,7 +25,7 @@ ${message.prefix}getmention (this will give you the mention message set for that
 	},
 );
 
-bot(
+haki(
 	{
 		pattern: 'setmention',
 		public: false,
@@ -41,7 +41,7 @@ bot(
 	},
 );
 
-bot(
+haki(
 	{
 		pattern: 'delmention',
 		public: false,
@@ -56,7 +56,7 @@ bot(
 	},
 );
 
-bot(
+haki(
 	{
 		on: 'groups-chat',
 		dontAddCommandList: true,

@@ -1,8 +1,8 @@
-import { bot } from '#lib';
+import { haki } from '#lib';
 import { extractUrlFromString } from 'xstro-utils';
 import { installPlugin, removePluginByName, listPlugins } from '#utils';
 
-bot(
+haki(
 	{
 		pattern: 'install ?(.*)',
 		public: false,
@@ -22,7 +22,7 @@ bot(
 	},
 );
 
-bot(
+haki(
 	{
 		pattern: 'delplugin ?(.*)',
 		public: false,
@@ -42,7 +42,7 @@ bot(
 	},
 );
 
-bot(
+haki(
 	{
 		pattern: 'getplugins',
 		public: false,
