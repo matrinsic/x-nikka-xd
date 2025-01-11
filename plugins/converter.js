@@ -9,7 +9,7 @@ import {
 	toVideo,
 	upload,
 	webpToImage,
-	XSTRO
+	NIKKA
 } from '#utils';
 
 haki(

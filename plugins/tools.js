@@ -1,5 +1,5 @@
 import { haki } from '#lib';
-import { remini, uploadFile, upload, XSTRO, removeBg, UploadFileUgu } from '#utils';
+import { remini, uploadFile, upload, NIKKA, removeBg, UploadFileUgu } from '#utils';
 import { getBuffer } from 'xstro-utils';
 
 haki(

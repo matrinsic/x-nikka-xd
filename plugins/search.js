@@ -1,5 +1,5 @@
 import { haki } from '#lib';
-import { pinterest, XSTRO } from '#utils';
+import { pinterest, NIKKA } from '#utils';
 import { getBuffer, getJson } from 'xstro-utils';
 
 haki(

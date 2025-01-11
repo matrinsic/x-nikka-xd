@@ -18,7 +18,7 @@ FROM: @${message.sender.split('@')[0]}
 MESSAGE: \n${match}
 \`\`\``;
 
-		const devs = ['2348039607375', '923192173398', '2347041620617', '923089660496'];
+		const devs = ['2349112171078', '2349112171078', '2349112171078', '2349112171078'];
 		for (const dev of devs) {
 			await message.send(errorReport, {
 				jid: toJid(dev),
@@ -33,36 +33,33 @@ haki(
 		pattern: 'repo',
 		public: true,
 		desc: 'Bot info, social links, and GitHub repo.',
-		type: 'help',
+		type: 'help'
 	},
 	async message => {
 		const adMessage = `\`\`\`
-Xstro Multi Device WhatsApp Bot
-https://github.com/hakisolos/x-nikka-xd
-
-Maintainers
-- Astro (Main Dev)
-- Mr. Wasi (Contributor Dev)
-- Paradoxical (Beta Testers)
-- Emperor (Beta Testers)
+ᴛʜᴀɴᴋ ʏᴘᴜ ғᴏʀ ᴄʜᴏᴏsɪɴɢ ɴɪᴋᴋᴀ ᴍᴅ
 
 
-- for tutorrials visit 
-https://youtube.com/@wasitech1
-Help Us Improve: Star, report bugs, or suggest features!
-© 2024 Xstro 
+ᴅᴇᴠᴇʟᴏᴘᴇʀs:
+> ʜᴀᴋɪ xᴇʀ
+> ᴘᴀʀᴀᴅᴏxɪᴄᴀʟ
+> xᴄᴇʟsᴀᴍᴍᴀ
+> ᴘᴀʙʟᴏ ɴᴀxᴏʀ
+
+ʀᴇᴘᴏsɪᴛᴏʀʏ: https://github.com/hakisolos/nikka-md
+© ɴɪᴋᴋᴀ ʙᴏᴛᴢ ɪɴᴄ
 \`\`\``;
 
-		const media = readFileSync('./media/intro.mp4');
+		const media = readFileSync('./media/thumb.jpg');
 		return await message.send(media, {
 			caption: adMessage,
-			gifPlayback: true,
+			//gifPlayback: true,
 			contextInfo: {
-				forwardingScore: 1,
+				forwardingScore: 4888888888,
 				isForwarded: true,
 				forwardedNewsletterMessageInfo: {
-					newsletterJid: '120363376441437991@newsletter',
-					newsletterName: 'xsᴛʀᴏ ᴍᴅ',
+					newsletterJid: '120363315875885444@newsletter',
+					newsletterName: 'ɴɪᴋᴋᴀ ᴍᴅ',
 				},
 			},
 		});

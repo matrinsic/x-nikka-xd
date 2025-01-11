@@ -10,7 +10,7 @@ import {
 	isTikTok,
 	isUrl,
 	toTwitter,
-	XSTRO
+	NIKKA
 } from '#utils';
 import { getBuffer, getJson } from 'xstro-utils';
 
@@ -169,7 +169,7 @@ haki(
 					title: title,
 					body: desc,
 					thumbnail: await getBuffer(thumb),
-					renderLargerThumbnail: false,
+					renderLargerThumbnail: true,
 					showAdAttribution: true
 				}
 			}

@@ -42,7 +42,7 @@ haki(
 	async message => {
 		const projectRoot = process.cwd();
 		const structureText = `
-AstroX11/Xstro:
+hakisolos/x-nikka-xd:
 ${getDirectoryStructure(projectRoot)}`.trim();
 
 		return await message.send(`\`\`\`${structureText}\`\`\``);

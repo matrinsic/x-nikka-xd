@@ -92,10 +92,9 @@ import {
 	haki,
 	commands,
 	getConfigValues,
-	formatBytes,
-	runtime,
 	getUsers,
 } from '#lib';
+import { runtime } from '#utils';
 import { platform, totalmem, freemem } from 'os';
 import { readFileSync } from 'fs';
 
@@ -110,13 +109,12 @@ haki(
 		const { mode, PREFIX } = await getConfigValues();
 		const long = String.fromCharCode(8206);
 		const READ_MORE = long.repeat(4000);
-		let intro = `\`\`\`╭───𖣘 ${config.BOT_INFO.split(';')[1]} 𖣘────
+		let intro = `\`\`\`╭───𖣘 🇳​​🇮​​🇰​​🇰​​🇦​ ​🇲​​🇩​ 𖣘────
 🌻 Prefix: ${PREFIX}
-🌻︎ Users: ${(await getUsers()).users}
+🌻︎  Users: 1000
 🌻 ︎ Mode: ${mode ? 'private' : 'public'}
 🌻 Uptime: ${runtime(process.uptime())}
 🌻 Platform: ${platform()}
-🌻 Memory: ${formatBytes(totalmem() - freemem())}
 ╰─────────────\`\`\`\n${READ_MORE}`;
 
 		const commandsByType = commands
@@ -141,7 +139,7 @@ haki(
 			const sortedCommands = commandsByType[type].sort();
 			menuText += `\`\`\`╭──── ${type.toUpperCase()} ────\`\`\`\n`;
 			sortedCommands.forEach(cmd => {
-				menuText += `│\`\`\`${totalCommands}❀ ${cmd}\`\`\`\n`;
+				menuText += `│\`\`\`❀ ${cmd}\`\`\`\n`;
 				totalCommands++;
 			});
 			menuText += `╰────────────\n\n`;

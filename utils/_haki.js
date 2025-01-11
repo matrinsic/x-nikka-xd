@@ -3,7 +3,7 @@ import { getBuffer, getJson } from 'xstro-utils';
 
 const { API_ID } = config;
 
-const XSTRO = {
+const NIKKA = {
 	facebook: async url => {
 		const res = await getJson(`${API_ID}/api/facebook?url=${encodeURIComponent(url)}`);
 		return res.url;
@@ -179,5 +179,5 @@ const XSTRO = {
 	}
 };
 
-export { XSTRO };
-export default XSTRO;
+export { NIKKA };
+export default NIKKA;
