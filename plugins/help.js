@@ -46,7 +46,7 @@ haki(
 > xᴄᴇʟsᴀᴍᴍᴀ
 > ᴘᴀʙʟᴏ ɴᴀxᴏʀ
 
-ʀᴇᴘᴏsɪᴛᴏʀʏ: https://github.com/hakisolos/nikka-md
+ʀᴇᴘᴏsɪᴛᴏʀʏ: https://github.com/hakisolos/x-nikka-xd
 © ɴɪᴋᴋᴀ ʙᴏᴛᴢ ɪɴᴄ
 \`\`\``;
 
