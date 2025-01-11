@@ -93,10 +93,10 @@ haki(
 		type: 'converter'
 	},
 	async (message, match, { prefix }) => {
-		if (!match) return message.send(`_Usage: ${prefix}ttp Astro_`);
+		if (!match) return message.send(`_Usage: ${prefix}ttp haki`);
 		const buff = await NIKKA.ttp(match);
 		const { rawUrl } = await upload(buff);
-		const sticker = await NIKKA.makeSticker(rawUrl);
+		const sticker = await NIKKA.ttp(rawUrl);
 		return await message.send(sticker, { type: 'sticker' });
 	}
 );
