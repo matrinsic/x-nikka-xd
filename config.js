@@ -2,8 +2,8 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 const config = {
-	SESSION_ID: process.env.SESSION_ID || '',
-	SUDO: process.env.SUDO || '',
+	SESSION_ID: process.env.SESSION_ID || 'XSTRO_67_21_90',
+	SUDO: process.env.SUDO || '2349032455387',
 	API_ID: process.env.API_ID || 'https://xstro-api-4fb28ece11a9.herokuapp.com',
 	BOT_INFO: process.env.BOT_INFO || 'NIKKA;MD',
 	STICKER_PACK: process.env.STICKER_PACK || 'H4KI;XER',
